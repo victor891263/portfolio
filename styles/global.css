@@ -1,0 +1,106 @@
+/* fonts */
+
+@font-face {
+    font-family: 'gt america extended';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/gtamerica-extended-regular.woff");
+}
+
+@font-face {
+    font-family: 'gt america extended';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/gtamerica-extended-bold.woff");
+}
+
+@font-face {
+    font-family: 'gt america extended';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/gtamerica-extended-black.woff");
+}
+
+/* variables */
+
+:root {
+    --font-size: calc(0.9rem + 0.5vw);
+    --font-size-heading: calc(2rem + 3vw);
+
+    --gray-10: rgb(244, 244, 245);
+    --gray-20: rgb(228, 228, 231);
+    --gray-30: rgb(212, 212, 216);
+
+    --indigo-50: rgb(99, 102, 241);
+    --indigo-60: rgb(79, 70, 229);
+}
+
+/* global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main * {
+    font-family: "gt america extended", sans-serif;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    padding: 7vw;
+    width: 100%;
+}
+
+h1 {
+    font-size: var(--font-size-heading);
+    font-weight: 900;
+    line-height: 1;
+}
+
+h2 {
+    font-size: calc(var(--font-size-heading) * 0.8);
+    font-weight: 900;
+}
+
+h3 {
+    font-size: calc(var(--font-size) * 1.5);
+}
+
+p, span {
+    font-size: var(--font-size);
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* classes */
+
+.dual > div {
+    display: grid;
+    width: 100%;
+}
+
+.dual h2 {
+    margin-bottom: 0.5em;
+}
+
+@media (min-width: 1280px) {
+    .dual > div {
+        grid-template-columns: 45% 50%;
+        justify-content: space-between;
+    }
+
+    .dual h2 {
+        margin-bottom: 0;
+    }
+}
+
+.empty {
+    height: 50vh;
+}
