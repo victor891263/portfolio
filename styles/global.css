@@ -22,9 +22,11 @@
     --gray-80: rgb(39, 39, 42);
     --gray-90: rgb(24, 24, 27);
 
+    --blue-5: rgb(239, 246, 255);
     --blue-10: rgb(219, 234, 254);
     --blue-30: rgb(147, 197, 253);
     --blue-40: rgb(96, 165, 250);
+    --blue-50: rgb(59, 130, 246);
     --blue-60: rgb(37, 99, 235);
     --blue-70: rgb(29, 78, 216);
     --blue-90: rgb(30, 58, 138);
@@ -42,9 +44,11 @@
     --gray-80: rgb(244, 244, 245);
     --gray-90: rgb(255, 255, 255);
 
+    --blue-5: rgb(14, 27, 63);
     --blue-10: rgb(30, 58, 138);
     --blue-30: rgb(29, 78, 216);
     --blue-40: rgb(37, 99, 235);
+    --blue-50: rgb(59, 130, 246);
     --blue-60: rgb(96, 165, 250);
     --blue-70: rgb(147, 197, 253);
     --blue-90: rgb(219, 234, 254);
@@ -70,21 +74,22 @@ body {
 main {
     display: grid;
     grid-gap: 8rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--site-max-width);
     padding-bottom: 8rem;
     padding-top: 8rem;
     transition: color 0.3s, transform 0.4s;
 }
 
+main > section:first-of-type {
+    padding-top: 3.6rem;
+}
+
 h1, h2 {
     font-family: "Gentium Book Basic", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 p {
@@ -127,26 +132,41 @@ svg {
 }
 
 
+/* root font size */
+
+html {
+    font-size: 15px;
+}
+
+@media (min-width: 540px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
 /* responsive viewport padding */
 
-nav.top, main, footer {
+header, main, footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--site-max-width);
+}
+
+header, main, footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    nav.top, main, footer {
+    header, main, footer {
         padding-left: 3rem;
         padding-right: 3rem;
     }
 }
 
 @media (min-width: 1536px) {
-    html {
-        font-size: 17px;
-    }
-
-    nav.top, main, footer {
+    header, main, footer {
         padding-left: 0;
         padding-right: 0;
     }
@@ -163,19 +183,10 @@ nav.top, main, footer {
     display: none;
 }
 
-nav.top {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--site-max-width);
+header {
     padding-top: 1.5rem;
-    width: 100vw;
-
-    transition: transform 0.4s;
-
     position: fixed;
+    transition: transform 0.4s;
 
     left: 0;
     right: 0;
@@ -183,8 +194,15 @@ nav.top {
     z-index: 2;
 }
 
-nav.top * {
-    font-size: 0.95rem;
+nav.top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.top span,
+nav.top a{
+    font-size: calc(1rem - 1px);
 }
 
 nav.top .button {
@@ -211,10 +229,6 @@ nav.top .links {
     align-items: center;
     display: none;
     gap: 1.5rem;
-}
-
-nav.top > a {
-    font-size: 0.95rem;
 }
 
 nav.top .mobile-buttons {
@@ -290,15 +304,12 @@ footer {
     align-items: flex-end;
     display: flex;
     justify-content: space-between;
-    max-width: var(--site-max-width);
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: 1.5rem;
 }
 
 footer span {
     color: var(--gray-50) !important;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 footer .icons {
@@ -313,6 +324,10 @@ footer svg {
 
 
 /* classes */
+
+.medium-paragraph {
+    font-size: calc(1rem + 1px);
+}
 
 .mouse {
     border: 0.1rem solid var(--gray-40);

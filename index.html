@@ -13,40 +13,43 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     -->
     <script src="scripts/email.min.js" type="text/javascript"></script>
+    <script src="./scripts/global.js" type="text/javascript" defer></script>
     <script src="index.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <nav class="top">
-        <button id="theme-button">
-            <div class="sun button">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.78 76.78"><path d="M110.81,61.46v-6.4H94.58a21.58,21.58,0,0,0-1.4-5.18l14-8.18L104,36.17,90,44.35A23,23,0,0,0,86.3,40.7l8.16-14-5.53-3.22-8.15,14a22,22,0,0,0-5.16-1.39V19.87h-6.4V36.1a22.27,22.27,0,0,0-5.12,1.37L56,23.46l-5.53,3.22,8.14,14a22.29,22.29,0,0,0-3.67,3.66l-14-8.16L37.66,41.7l14,8.15a21.38,21.38,0,0,0-1.41,5.21H34v6.4H50.26a21.79,21.79,0,0,0,1.4,5.19l-14,8.14,3.22,5.53,14-8.15a22.54,22.54,0,0,0,3.62,3.62l-8.15,14L55.88,93,64,79a22.29,22.29,0,0,0,5.19,1.41V96.65h6.4V80.43A22.11,22.11,0,0,0,80.86,79L89,93l5.53-3.22L86.38,75.76A22.29,22.29,0,0,0,90,72.15l14,8.17,3.2-5.53-14-8.17a21.9,21.9,0,0,0,1.4-5.16Zm-22.39-3.2c-.68,21.14-31.33,21.14-32,0C57.1,37.12,87.75,37.13,88.42,58.26Z" transform="translate(-34.03 -19.87)"/></svg>
-                <span>Go bright</span>
-            </div>
-            <div class="moon button">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.96 80.7"><path d="M72.72,102.87A40.37,40.37,0,0,1,32.4,62.54c-.52-30.09,33.71-50.36,59.78-35.25l5.22,2.89-5.18,3C69.7,45.53,71.35,79.75,94.91,90l5.44,2.46-4.93,3.38A40.08,40.08,0,0,1,72.72,102.87Zm0-73.93a33.63,33.63,0,0,0-33.6,33.6c-.52,23.92,26.09,41,47.57,30.52a38.79,38.79,0,0,1-3-62.24A32.81,32.81,0,0,0,72.72,28.94Z" transform="translate(-32.39 -22.17)"/></svg>
-                <span>Go dark</span>
-            </div>
-        </button>
-        <div class="links">
-            <a href="#projects">About</a>
-            <a href="#skills">Projects</a>
-            <a href="#connect">Contact</a>
-            <a class="button" href="https://drive.google.com/file/d/1KIXSvmBZn-Kbq60FtxNoDZ1DrWAnQDK1/view?usp=share_link" target="_blank">
-                <span>Download CV</span>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.88 82.88"><path d="M65,77.41a10.29,10.29,0,0,0,7.33-3L85.83,60.84,81,56,68.4,68.52,68.31,11.8h-6.9l.09,56.66L49,56l-4.88,4.88L57.65,74.37A10.27,10.27,0,0,0,65,77.41Z" transform="translate(-23.42 -11.8)"/><path d="M99.39,67.05V84.32a3.44,3.44,0,0,1-3.45,3.45H33.78a3.44,3.44,0,0,1-3.45-3.45V67.05H23.42V84.32A10.36,10.36,0,0,0,33.78,94.68H95.94A10.36,10.36,0,0,0,106.3,84.32V67.05Z" transform="translate(-23.42 -11.8)"/></svg>
-            </a>
-        </div>
-        <div class="mobile-buttons">
-            <a class="button" href="https://drive.google.com/file/d/1KIXSvmBZn-Kbq60FtxNoDZ1DrWAnQDK1/view?usp=share_link" target="_blank">
-                <span>CV</span>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.88 82.88"><path d="M65,77.41a10.29,10.29,0,0,0,7.33-3L85.83,60.84,81,56,68.4,68.52,68.31,11.8h-6.9l.09,56.66L49,56l-4.88,4.88L57.65,74.37A10.27,10.27,0,0,0,65,77.41Z" transform="translate(-23.42 -11.8)"/><path d="M99.39,67.05V84.32a3.44,3.44,0,0,1-3.45,3.45H33.78a3.44,3.44,0,0,1-3.45-3.45V67.05H23.42V84.32A10.36,10.36,0,0,0,33.78,94.68H95.94A10.36,10.36,0,0,0,106.3,84.32V67.05Z" transform="translate(-23.42 -11.8)"/></svg>
-            </a>
-            <button id="toggle-mobile-menu">
-                <svg class="burger" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.99 67.99"><rect y="29.75" width="101.99" height="8.5"/><rect width="101.99" height="8.5"/><rect y="59.49" width="101.99" height="8.5"/></svg>
-                <svg class="cross" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.5 67.5"><polygon points="67.5 3.98 63.52 0 33.75 29.77 3.98 0 0 3.98 29.77 33.75 0 63.52 3.98 67.5 33.75 37.73 63.52 67.5 67.5 63.52 37.73 33.75 67.5 3.98"/></svg>
+    <header>
+        <nav class="top">
+            <button id="theme-button">
+                <div class="sun button">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.78 76.78"><path d="M110.81,61.46v-6.4H94.58a21.58,21.58,0,0,0-1.4-5.18l14-8.18L104,36.17,90,44.35A23,23,0,0,0,86.3,40.7l8.16-14-5.53-3.22-8.15,14a22,22,0,0,0-5.16-1.39V19.87h-6.4V36.1a22.27,22.27,0,0,0-5.12,1.37L56,23.46l-5.53,3.22,8.14,14a22.29,22.29,0,0,0-3.67,3.66l-14-8.16L37.66,41.7l14,8.15a21.38,21.38,0,0,0-1.41,5.21H34v6.4H50.26a21.79,21.79,0,0,0,1.4,5.19l-14,8.14,3.22,5.53,14-8.15a22.54,22.54,0,0,0,3.62,3.62l-8.15,14L55.88,93,64,79a22.29,22.29,0,0,0,5.19,1.41V96.65h6.4V80.43A22.11,22.11,0,0,0,80.86,79L89,93l5.53-3.22L86.38,75.76A22.29,22.29,0,0,0,90,72.15l14,8.17,3.2-5.53-14-8.17a21.9,21.9,0,0,0,1.4-5.16Zm-22.39-3.2c-.68,21.14-31.33,21.14-32,0C57.1,37.12,87.75,37.13,88.42,58.26Z" transform="translate(-34.03 -19.87)"/></svg>
+                    <span>Go bright</span>
+                </div>
+                <div class="moon button">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.96 80.7"><path d="M72.72,102.87A40.37,40.37,0,0,1,32.4,62.54c-.52-30.09,33.71-50.36,59.78-35.25l5.22,2.89-5.18,3C69.7,45.53,71.35,79.75,94.91,90l5.44,2.46-4.93,3.38A40.08,40.08,0,0,1,72.72,102.87Zm0-73.93a33.63,33.63,0,0,0-33.6,33.6c-.52,23.92,26.09,41,47.57,30.52a38.79,38.79,0,0,1-3-62.24A32.81,32.81,0,0,0,72.72,28.94Z" transform="translate(-32.39 -22.17)"/></svg>
+                    <span>Go dark</span>
+                </div>
             </button>
-        </div>
-    </nav>
+            <div class="links">
+                <a href="#projects">About</a>
+                <a href="#skills">Projects</a>
+                <a href="#connect">Contact</a>
+                <a class="button" href="https://drive.google.com/file/d/1KIXSvmBZn-Kbq60FtxNoDZ1DrWAnQDK1/view?usp=share_link" target="_blank">
+                    <span>Download CV</span>
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.88 82.88"><path d="M65,77.41a10.29,10.29,0,0,0,7.33-3L85.83,60.84,81,56,68.4,68.52,68.31,11.8h-6.9l.09,56.66L49,56l-4.88,4.88L57.65,74.37A10.27,10.27,0,0,0,65,77.41Z" transform="translate(-23.42 -11.8)"/><path d="M99.39,67.05V84.32a3.44,3.44,0,0,1-3.45,3.45H33.78a3.44,3.44,0,0,1-3.45-3.45V67.05H23.42V84.32A10.36,10.36,0,0,0,33.78,94.68H95.94A10.36,10.36,0,0,0,106.3,84.32V67.05Z" transform="translate(-23.42 -11.8)"/></svg>
+                </a>
+            </div>
+            <div class="mobile-buttons">
+                <a class="button" href="https://drive.google.com/file/d/1KIXSvmBZn-Kbq60FtxNoDZ1DrWAnQDK1/view?usp=share_link" target="_blank">
+                    <span>CV</span>
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.88 82.88"><path d="M65,77.41a10.29,10.29,0,0,0,7.33-3L85.83,60.84,81,56,68.4,68.52,68.31,11.8h-6.9l.09,56.66L49,56l-4.88,4.88L57.65,74.37A10.27,10.27,0,0,0,65,77.41Z" transform="translate(-23.42 -11.8)"/><path d="M99.39,67.05V84.32a3.44,3.44,0,0,1-3.45,3.45H33.78a3.44,3.44,0,0,1-3.45-3.45V67.05H23.42V84.32A10.36,10.36,0,0,0,33.78,94.68H95.94A10.36,10.36,0,0,0,106.3,84.32V67.05Z" transform="translate(-23.42 -11.8)"/></svg>
+                </a>
+                <button id="toggle-mobile-menu">
+                    <svg class="burger" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.99 67.99"><rect y="29.75" width="101.99" height="8.5"/><rect width="101.99" height="8.5"/><rect y="59.49" width="101.99" height="8.5"/></svg>
+                    <svg class="cross" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.5 67.5"><polygon points="67.5 3.98 63.52 0 33.75 29.77 3.98 0 0 3.98 29.77 33.75 0 63.52 3.98 67.5 33.75 37.73 63.52 67.5 67.5 63.52 37.73 33.75 67.5 3.98"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
     <nav class="left">
         <a href="#projects">About</a>
         <a href="#skills">Projects</a>
@@ -56,7 +59,7 @@
         <section id="hero" class="animated">
             <div>
                 <h1>Victor here.<br>I make web apps.</h1>
-                <p>I'm a self-taught full stack developer, with a degree in electronic engineering; building web applications is my way of creating solutions to real life problems. Currently available to freelance projects and full-time positions.</p>
+                <p class="medium-paragraph">I'm a self-taught full stack developer, with a degree in electronic engineering; building web applications is my way of creating solutions to real life problems. Currently available to freelance projects and full-time positions.</p>
                 <button>
                     <span>Contact me</span>
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.77 50.81"><g id="_01_align_center" data-name=" 01 align center"><path d="M105.27,53.58,87.9,36.21l-5.36,5.36L98.68,57.72l-81,.11v7.58l81.23-.12L82.54,81.67,87.89,87l17.38-17.37A11.74,11.74,0,0,0,105.27,53.58Z" transform="translate(-17.68 -36.21)"/></g></svg>
