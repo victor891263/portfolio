@@ -48,6 +48,51 @@ elementsToAnimate.forEach((element) => observer.observe(element));
 
 
 
+// smoothly scroll to the specified element
+
+function scrollToElement(element) {
+    // Get the top position of the element
+    let elementTop = element.getBoundingClientRect().top;
+
+    // Calculate the scroll distance from the top of the page. Also, add some padding at the top
+    let scrollDistance = window.pageYOffset + elementTop - (window.outerHeight / 20);
+
+    // Scroll the page smoothly to the element
+    window.scroll({
+        top: scrollDistance,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Get all elements with the class 'scroll-to'
+let elements = document.querySelectorAll('.scroll-to');
+
+// Add a click event listener to each element
+elements.forEach(element => {
+    element.addEventListener('click', event => {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Get the target element from the link's href attribute
+        let targetElement = document.querySelector(event.target.getAttribute('href'));
+
+        // If the target link belongs to the mobile menu, close the mobile menu as well
+        if (event.target.classList.contains('mobile')) {
+            root.setAttribute("data-mobile-nav", "hidden");
+            setTimeout(() => {
+                // Scroll to the target element
+                scrollToElement(targetElement);
+            }, 405);
+        } else {
+            // Scroll to the target element
+            scrollToElement(targetElement);
+        }
+    });
+});
+
+
+
 // textarea auto-expand logic
 
 document.querySelector("#connect textarea").addEventListener("input", (e) => {
