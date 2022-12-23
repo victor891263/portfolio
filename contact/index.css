@@ -1,0 +1,100 @@
+@import "../styles/global.css";
+
+
+
+main {
+    max-width: 768px;
+}
+
+/* connect section */
+
+#connect h2 {
+    margin-bottom: 0.7em;
+}
+
+#connect .myemail {
+    color: var(--sky-60);
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#connect form {
+    display: grid;
+    grid-gap: 2rem;
+    margin-top: 4rem;
+}
+
+#connect form > div > * {
+    display: block;
+    width: 100%;
+}
+
+#connect label {
+    font-weight: bold;
+    margin-bottom: 0.7em;
+}
+
+#connect input[type="text"],
+#connect input[type="email"],
+#connect textarea {
+    border-bottom: 1px solid var(--gray-90);
+    padding-bottom: 0.7em;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+#connect input[type="text"]:focus,
+#connect input[type="email"]:focus,
+#connect textarea:focus {
+    border-color: var(--blue-60);
+}
+
+#connect textarea {
+    min-height: 0;
+    height: 2em;
+    line-height: 1.7;
+    overflow: hidden;
+    resize: none;
+}
+
+#connect input[type="submit"] {
+    background-color: var(--sky-60);
+    border-radius: 10em;
+    color: var(--gray-0);
+    cursor: pointer;
+    outline: 0 solid var(--sky-10);
+    padding: 0.6em 1.2em;
+    transition: background-color 0.3s, color 0.3s, outline-width 0.2s;
+    width: fit-content;
+}
+
+#connect input[type="submit"]:hover {
+    background-color: var(--sky-70);
+}
+
+#connect input[type="submit"]:focus {
+    outline-width: 6px;
+}
+
+#connect .error {
+    color: var(--red-60);
+    display: none;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0.5em;
+}
+
+
+
+/* classes */
+
+.dual {
+    display: grid;
+    max-width: 1024px;
+}
+
+@media (min-width: 1024px) {
+    .dual {
+        grid-column-gap: 5rem;
+        grid-template-columns: 13rem auto;
+    }
+}

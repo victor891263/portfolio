@@ -17,25 +17,33 @@ if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").match
 
 
 
-// mobile navigation bar appearing/disappearing based on scroll logic
+// scroll-in animations logic
 
-const header = document.querySelector("header");
+// determine offset value based on viewport height
+let viewOffset = window.outerHeight / 8;
 
-// keep track of the previous scroll position
-let previousScrollPosition = window.pageYOffset;
-
-// add an event listener to handle scrolling
-window.addEventListener('scroll', function() {
-    // get the current scroll position
-    const currentScrollPosition = window.pageYOffset;
-
-    // if the user is scrolling up, show the fixed element. if the user is scrolling down, hide the fixed element
-    if (currentScrollPosition < previousScrollPosition) header.style.transform = "translateY(0)";
-    else header.style.transform = "translateY(-100%)";
-
-    // update the previous scroll position
-    previousScrollPosition = currentScrollPosition;
+// update offset value if viewport height changes
+window.addEventListener("resize", () => {
+    viewOffset = window.outerHeight / 8;
 });
+
+// get the elements to animate
+const elementsToAnimate = document.querySelectorAll(".animated");
+
+// create an observer instance
+const observer = new IntersectionObserver((entries) => {
+    // loop through each observed element
+    entries.forEach((entry) => {
+        // if the element is in the viewport, animate it
+        if (entry.isIntersecting) entry.target.classList.add("animate");
+    });
+}, {
+    root: document,
+    rootMargin: `0px 0px -${viewOffset}px 0px`
+});
+
+// start observing the elements
+elementsToAnimate.forEach((element) => observer.observe(element));
 
 
 

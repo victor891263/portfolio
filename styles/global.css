@@ -1,13 +1,31 @@
-/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap');
+@font-face {
+    font-family: 'FS Kim Text';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/fs-kim-text-medium.woff2');
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/circular-regular.woff2');
+}
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/circular-bold.woff2');
+}
 
 
 /* variables */
 
 :root {
-    --site-max-width: 1280px;
+    --site-max-width: 1536px;
+    --font-size: calc(15px + 0.2vw);
 }
 
 :root[data-theme="light"] {
@@ -22,14 +40,20 @@
     --gray-80: rgb(39, 39, 42);
     --gray-90: rgb(24, 24, 27);
 
-    --blue-5: rgb(239, 246, 255);
-    --blue-10: rgb(219, 234, 254);
-    --blue-30: rgb(147, 197, 253);
-    --blue-40: rgb(96, 165, 250);
-    --blue-50: rgb(59, 130, 246);
-    --blue-60: rgb(37, 99, 235);
-    --blue-70: rgb(29, 78, 216);
-    --blue-90: rgb(30, 58, 138);
+    --sky-10: rgb(224, 242, 254);
+
+    --sky-30: rgb(125, 211, 252);
+    --sky-40: rgb(56, 189, 248);
+
+    --sky-60: rgb(2, 132, 199);
+    --sky-70: rgb(3 105 161);
+
+    --sky-90: rgb(12, 74, 110);
+
+    --red-40: rgb(248, 113, 113);
+    --red-60: rgb(220, 38, 38);
+
+    --yellow-20: rgb(254, 240, 138);
 }
 
 :root[data-theme="dark"] {
@@ -44,14 +68,18 @@
     --gray-80: rgb(244, 244, 245);
     --gray-90: rgb(255, 255, 255);
 
-    --blue-5: rgb(14, 27, 63);
-    --blue-10: rgb(30, 58, 138);
-    --blue-30: rgb(29, 78, 216);
-    --blue-40: rgb(37, 99, 235);
-    --blue-50: rgb(59, 130, 246);
-    --blue-60: rgb(96, 165, 250);
-    --blue-70: rgb(147, 197, 253);
-    --blue-90: rgb(219, 234, 254);
+    --sky-10: rgb(12, 74, 110);
+
+    --sky-30: rgb(3 105 161);
+    --sky-40: rgb(2, 132, 199);
+
+    --sky-60: rgb(56, 189, 248);
+    --sky-70: rgb(125, 211, 252);
+
+    --sky-90: rgb(224, 242, 254);
+
+    --red-40: rgb(220, 38, 38);
+    --red-60: rgb(248, 113, 113);
 }
 
 
@@ -60,7 +88,7 @@
 * {
     box-sizing: border-box;
     color: var(--gray-90);
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Circular", sans-serif;
     margin: 0;
     padding: 0;
     transition: color 0.3s;
@@ -68,7 +96,12 @@
 
 body {
     background-color: var(--gray-0);
+    overflow-x: hidden;
     transition: background-color 0.3s;
+}
+
+[data-mobile-nav="visible"] body {
+    overflow-y: hidden;
 }
 
 main {
@@ -84,16 +117,17 @@ main > section:first-of-type {
 }
 
 h1, h2 {
-    font-family: "Gentium Book Basic", sans-serif;
-    font-size: 2.4rem;
+    font-family: 'FS Kim Text', serif;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 p {
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 a {
@@ -135,64 +169,47 @@ svg {
 /* root font size */
 
 html {
-    font-size: 15px;
-}
-
-@media (min-width: 540px) {
-    html {
-        font-size: 16px;
-    }
+    font-size: var(--font-size);
 }
 
 
 /* responsive viewport padding */
 
-nav.top, main, footer {
-    margin-left: auto;
-    margin-right: auto;
+main {
     max-width: var(--site-max-width);
 }
 
 nav.top, main, footer {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
 
-@media (min-width: 768px) {
-    nav.top, main, footer {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-}
-
-@media (min-width: 1536px) {
-    nav.top, main, footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
+    padding-left: 7vw;
+    padding-right: 7vw;
 }
 
 
 /* top navigation bar */
 
-[data-theme="light"] #theme-button .sun {
+[data-theme="light"] #theme-button .moon {
     display: none;
 }
 
-[data-theme="dark"] #theme-button .moon {
+[data-theme="dark"] #theme-button .sun {
     display: none;
 }
 
 header {
     max-width: 100%;
     padding-top: 1.5rem;
-    position: fixed;
-    transition: transform 0.4s;
+    position: absolute;
     width: 100vw;
 
     left: 0;
     top: 0;
     z-index: 2;
+}
+
+header button {
+    display: inline-flex; /* to get rid of weird unnecessary padding */
+    height: fit-content;
 }
 
 nav.top {
@@ -203,44 +220,50 @@ nav.top {
 
 nav.top span,
 nav.top a{
-    font-size: calc(1rem - 1px);
+    font-size: 0.9rem;
 }
 
-nav.top .button {
+nav.top .resume {
     align-items: center;
     background-color: var(--gray-0);
     border: 1px solid var(--gray-30);
-    border-radius: 10rem;
+    border-radius: 10em;
     display: flex;
     gap: 0.5rem;
-    padding: 0.6em 1em;
+    padding: 0.5em 1em;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-nav.top .button svg {
+nav.top .resume svg {
     fill: var(--gray-90);
     height: 1em;
 }
 
-nav.top .button:hover {
+nav.top .resume:hover {
     background-color: var(--gray-10);
 }
 
-nav.top .links {
+nav.top .buttons {
     align-items: center;
-    display: none;
+    display: flex;
     gap: 1.5rem;
 }
 
-nav.top .mobile-buttons {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
+#theme-button svg {
+    fill: var(--gray-90);
+    height: 1.2em;
 }
 
 #toggle-mobile-menu svg {
     fill: var(--gray-90);
+}
+
+#toggle-mobile-menu .burger {
     height: 1em;
+}
+
+#toggle-mobile-menu .cross {
+    height: 1.1em;
 }
 
 [data-mobile-nav="hidden"] #toggle-mobile-menu .cross {
@@ -251,21 +274,11 @@ nav.top .mobile-buttons {
     display: none;
 }
 
-@media (min-width: 768px) {
-    nav.top .links {
-        display: flex;
-    }
-
-    nav.top .mobile-buttons {
-        display: none;
-    }
-}
-
 
 /* left navigation bar */
 
 [data-mobile-nav="hidden"] nav.left {
-    transform: translateX(-100%);
+    transform: translateX(-100vw);
 }
 
 [data-mobile-nav="visible"] nav.left {
@@ -273,7 +286,7 @@ nav.top .mobile-buttons {
 }
 
 [data-mobile-nav="visible"] main {
-    transform: translateX(100%);
+    transform: translateX(100vw);
 }
 
 nav.left {
@@ -287,7 +300,7 @@ nav.left {
     padding: 1.5rem 7vw;
     width: 100vw;
 
-    transition: transform 0.4s;
+    transition: background-color 0.3s, transform 0.4s;
 
     left: 0;
     position: fixed;
@@ -296,9 +309,8 @@ nav.left {
 }
 
 nav.left a {
-    font-family: "Gentium Book Basic", sans-serif;
-    font-size: 2.3rem;
-    font-weight: bold;
+    font-family: 'FS Kim Text', serif;
+    font-size: 2rem;
 }
 
 
@@ -357,5 +369,24 @@ footer svg {
     }
     30% {
         transform: translateY(50%);
+    }
+}
+
+.animated {
+    opacity: 0;
+}
+
+.animate {
+    animation: enter 0.7s forwards;
+}
+
+@keyframes enter {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

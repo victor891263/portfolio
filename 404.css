@@ -1,0 +1,44 @@
+@import "./styles/global.css";
+
+body {
+    display: grid;
+    min-height: 100vh;
+}
+
+section {
+    max-width: 540px;
+}
+
+h1 {
+    margin-bottom: 0.7em;
+}
+
+p {
+    margin-bottom: 1.7rem;
+}
+
+.link-arrow {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.link-arrow span {
+    color: var(--sky-60);
+}
+
+.link-arrow svg {
+    fill: var(--sky-60);
+    height: 0.8rem;
+    margin-top: 0.1rem;
+    transition: fill 0.3s, transform 0.2s;
+}
+
+.link-arrow:hover svg {
+    transform: translateX(0.5rem);
+}
+
+footer {
+    align-self: flex-end;
+}
