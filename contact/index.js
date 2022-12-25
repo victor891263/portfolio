@@ -7,15 +7,31 @@ emailjs.init('66ecQITsSp3cRIEAd');
 document.querySelector('#connect form').addEventListener('submit', function (event) {
     event.preventDefault();
 
+    // if validation fails, do not send the message
     const isError = validateForm();
     if (isError) return;
+
+    // make button disabled while operation is running
+    const submitButton = document.querySelector('#connect input[type="submit"]');
+    submitButton.value = 'Sending...';
+    submitButton.disabled = true;
+
+    const statusBox = document.querySelector('#connect .status');
+    statusBox.classList.remove('succeeded', 'failed');
 
     // these IDs from the previous steps
     emailjs.sendForm('service_cdaqthh', 'template_nak7yxt', this)
         .then(() => {
-            console.log('SUCCESS!');
+            statusBox.classList.add('succeeded');
+
+            submitButton.value = 'Send message';
+            submitButton.disabled = false;
         }, (error) => {
-            console.log('FAILED...', error);
+            statusBox.classList.add('failed');
+            console.log(error);
+
+            submitButton.value = 'Send message';
+            submitButton.disabled = false;
         });
 });
 

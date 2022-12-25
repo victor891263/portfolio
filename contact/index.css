@@ -45,13 +45,13 @@ main {
 #connect input[type="text"]:focus,
 #connect input[type="email"]:focus,
 #connect textarea:focus {
-    border-color: var(--blue-60);
+    border-color: var(--sky-60);
 }
 
 #connect textarea {
     min-height: 0;
-    height: 2em;
-    line-height: 1.7;
+    height: 2.2em;
+    line-height: 1.5;
     overflow: hidden;
     resize: none;
 }
@@ -62,13 +62,17 @@ main {
     color: var(--gray-0);
     cursor: pointer;
     outline: 0 solid var(--sky-10);
-    padding: 0.6em 1.2em;
+    padding: 0.7em 1.2em;
     transition: background-color 0.3s, color 0.3s, outline-width 0.2s;
     width: fit-content;
 }
 
 #connect input[type="submit"]:hover {
     background-color: var(--sky-70);
+}
+
+#connect input[type="submit"]:disabled:hover {
+    background-color: var(--sky-60) !important;
 }
 
 #connect input[type="submit"]:focus {
@@ -81,6 +85,52 @@ main {
     font-size: 0.9rem;
     line-height: 1.6;
     margin-top: 0.5em;
+}
+
+#connect .status {
+    margin-top: 2rem;
+}
+
+#connect .status > span {
+    border-radius: 0.4em;
+    display: none;
+    padding: 0.7em 1em;
+    width: fit-content;
+}
+
+#connect .status > span span {
+    margin-right: 0.5rem;
+}
+
+#connect .status .success {
+    background-color: var(--green-5);
+    color: var(--green-60);
+}
+
+#connect .status .success span {
+    color: var(--green-60);
+}
+
+#connect .status .fail {
+    background-color: var(--red-5);
+    color: var(--red-60);
+}
+
+#connect .status .fail span {
+    color: var(--red-60);
+    font-size: 0.7rem;
+    font-weight: 700;
+    vertical-align: top;
+    display: inline-flex;
+    padding-top: 0.05rem;
+}
+
+#connect .status.succeeded .success {
+    display: block;
+}
+
+#connect .status.failed .fail {
+    display: block;
 }
 
 

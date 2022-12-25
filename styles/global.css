@@ -50,8 +50,15 @@
 
     --sky-90: rgb(12, 74, 110);
 
+    --red-5: rgb(254, 242, 242);
     --red-40: rgb(248, 113, 113);
     --red-60: rgb(220, 38, 38);
+    --red-90: rgb(62, 14, 14);
+
+    --green-5: rgb(236, 253, 245);
+    --green-40: rgb(52, 211, 153);
+    --green-60: rgb(5, 150, 105);
+    --green-90: rgb(3, 43, 32);
 
     --yellow-20: rgb(254, 240, 138);
 }
@@ -78,8 +85,15 @@
 
     --sky-90: rgb(224, 242, 254);
 
+    --red-5: rgb(62, 14, 14);
     --red-40: rgb(220, 38, 38);
     --red-60: rgb(248, 113, 113);
+    --red-90: rgb(254, 242, 242);
+
+    --green-5: rgb(3, 43, 32);
+    --green-40: rgb(5, 150, 105);
+    --green-60: rgb(52, 211, 153);
+    --green-90: rgb(236, 253, 245);
 }
 
 
@@ -230,7 +244,7 @@ nav.top .resume {
     border-radius: 10em;
     display: flex;
     gap: 0.5rem;
-    padding: 0.5em 1em;
+    padding: 0.6em 1em;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 

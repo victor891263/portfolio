@@ -42,25 +42,27 @@
     <section id="connect" class="animated">
         <h2>Say hello</h2>
         <p>Use the form below to send me a message. I'll try to reply within a day. You can also send me an email at <span class="myemail">victor891263@gmail.com</span>.</p>
-        <div>
-            <form>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" name="sender" id="name"/>
-                    <span class="error name">✖ Name cannot be blank and must be less than 20 characters.</span>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="senderEmail" id="email"/>
-                    <span class="error email">✖ Email cannot be blank and must be less than 50 characters.</span>
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
-                    <span class="error message">✖ Message cannot be blank and must be less than 500 characters.</span>
-                </div>
-                <input type="submit" value="Send message"/>
-            </form>
+        <form>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="sender" id="name"/>
+                <span class="error name">✖ Name cannot be blank and must be less than 20 characters.</span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="senderEmail" id="email"/>
+                <span class="error email">✖ Email cannot be blank and must be less than 50 characters.</span>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+                <span class="error message">✖ Message cannot be blank and must be less than 500 characters.</span>
+            </div>
+            <input type="submit" value="Send message"/>
+        </form>
+        <div class="status">
+            <span class="success"><span>✓</span>Message sent successfully!</span>
+            <span class="fail"><span>╳</span>Failed to send message. Please retry.</span>
         </div>
     </section>
 </main>
