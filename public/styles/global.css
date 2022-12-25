@@ -1,29 +1,11 @@
-@font-face {
-    font-family: 'FS Kim Text';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/fs-kim-text-medium.woff2');
-}
-
-@font-face {
-    font-family: 'Circular';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/circular-regular.woff2');
-}
-@font-face {
-    font-family: 'Circular';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/circular-bold.woff2');
-}
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600&family=Noto+Sans:wght@400;500;600;700&display=swap');
 
 
 /* variables */
 
 :root {
     --site-max-width: 1536px;
-    --font-size: calc(15px + 0.2vw);
+    --font-size: calc(14px + 0.2vw);
 }
 
 :root[data-theme="light"] {
@@ -37,6 +19,11 @@
     --gray-70: rgb(63, 63, 70);
     --gray-80: rgb(39, 39, 42);
     --gray-90: rgb(24, 24, 27);
+
+    --blue-30: rgb(147, 197, 253);
+    --blue-40: rgb(96, 165, 250);
+    --blue-60: rgb(37, 99, 235);
+    --blue-70: rgb(29, 78, 216);
 
     --sky-10: rgb(224, 242, 254);
 
@@ -73,6 +60,11 @@
     --gray-80: rgb(244, 244, 245);
     --gray-90: rgb(255, 255, 255);
 
+    --blue-30: rgb(29, 78, 216);
+    --blue-40: rgb(37, 99, 235);
+    --blue-60: rgb(96, 165, 250);
+    --blue-70: rgb(147, 197, 253);
+
     --sky-10: rgb(12, 74, 110);
 
     --sky-30: rgb(3 105 161);
@@ -100,7 +92,7 @@
 * {
     box-sizing: border-box;
     color: var(--gray-90);
-    font-family: "Circular", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     transition: color 0.3s;
@@ -128,18 +120,29 @@ main > section:first-of-type {
     padding-top: 3.6rem;
 }
 
-h1, h2 {
-    font-family: 'FS Kim Text', serif;
-    font-size: 2rem;
+h1, h2, h3 {
+    font-family: 'Domine', serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: calc(2.9rem + 1vw);
     font-weight: 400;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 a {
@@ -230,19 +233,14 @@ nav.top {
     justify-content: space-between;
 }
 
-nav.top span,
-nav.top a{
-    font-size: 0.9rem;
-}
-
 nav.top .resume {
     align-items: center;
     background-color: var(--gray-0);
     border: 1px solid var(--gray-30);
-    border-radius: 10em;
+    border-radius: 0.4em;
     display: flex;
     gap: 0.5rem;
-    padding: 0.6em 1em;
+    padding: 0.5em 0.8em;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
@@ -306,7 +304,7 @@ nav.left {
     background-color: var(--gray-0);
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: 1.5rem;
     height: 100vh;
     justify-content: center;
     padding: 1.5rem 7vw;
@@ -321,7 +319,7 @@ nav.left {
 }
 
 nav.left a {
-    font-family: 'FS Kim Text', serif;
+    font-family: 'Domine', serif;
     font-size: 2rem;
 }
 

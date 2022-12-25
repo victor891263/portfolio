@@ -8,9 +8,8 @@
 }
 
 #hero h1 {
-    font-size: calc(2.7rem + 1vw);
     margin-bottom: 0.5em;
-    max-width: 31rem;
+    max-width: 33rem;
 }
 
 
@@ -65,12 +64,12 @@
 }
 
 .link-arrow span {
-    color: var(--sky-60);
+    color: var(--blue-60);
     font-size: 1.1rem;
 }
 
 .link-arrow svg {
-    fill: var(--sky-60);
+    fill: var(--blue-60);
     height: 0.8rem;
     margin-top: 0.1rem;
     transition: fill 0.3s, transform 0.2s;
