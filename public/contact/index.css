@@ -41,6 +41,10 @@ main {
     border-radius: 0.4em;
     padding: 0.7em 0.9em;
     transition: border-color 0.3s, color 0.3s;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 #connect input[type="text"]:focus,
@@ -59,12 +63,12 @@ main {
 
 #connect input[type="submit"] {
     background-color: var(--blue-60);
-    border-radius: 0.4em !important;
+    border-radius: 0.4em;
     color: var(--gray-0);
     cursor: pointer;
-    display: block !important;
+    display: block;
     font-weight: bold;
-    padding: 0.8em 1.2em !important;
+    padding: 0.8em 1.2em;
     transition: background-color 0.3s, color 0.3s;
     width: fit-content;
 }
