@@ -61,9 +61,14 @@ main {
     resize: none;
 }
 
-#connect input[type="submit"] {
+#submitButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     background-color: var(--blue-60);
     border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
     color: var(--gray-0);
     cursor: pointer;
     display: block;
