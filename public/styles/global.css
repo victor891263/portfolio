@@ -136,12 +136,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 p {
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 a {
@@ -182,9 +182,27 @@ svg {
 
 /* root font size */
 
-@media (min-width: 1536px) {
+@media (min-width: 768px) {
     html {
         font-size: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1366px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 1536px) {
+    html {
+        font-size: 20px;
     }
 }
 

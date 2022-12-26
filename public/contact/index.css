@@ -5,12 +5,14 @@
 #connect {
     display: grid;
     grid-row-gap: 4rem;
+    max-width: 32rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1536px) {
     #connect {
         grid-template-columns: 20rem 50%;
         justify-content: space-between;
+        max-width: none;
     }
 }
 

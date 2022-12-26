@@ -71,7 +71,7 @@ h1, h2 {
 
 @media (min-width: 1024px) {
     .dual {
-        grid-template-columns: auto 40rem;
+        grid-template-columns: auto 32rem;
         justify-content: space-between;
     }
 }
