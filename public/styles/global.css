@@ -5,7 +5,6 @@
 
 :root {
     --site-max-width: 1536px;
-    --font-size: calc(14px + 0.2vw);
 }
 
 :root[data-theme="light"] {
@@ -183,21 +182,35 @@ svg {
 
 /* root font size */
 
-html {
-    font-size: var(--font-size);
+@media (min-width: 1536px) {
+    html {
+        font-size: 17px;
+    }
 }
 
 
 /* responsive viewport padding */
 
-main {
+nav.top, main, footer {
+    margin-left: auto;
+    margin-right: auto;
     max-width: var(--site-max-width);
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-nav.top, main, footer {
+@media (min-width: 768px) {
+    nav.top, main, footer {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
 
-    padding-left: 7vw;
-    padding-right: 7vw;
+@media (min-width: 1536px) {
+    nav.top, main, footer {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
 }
 
 
@@ -213,7 +226,7 @@ nav.top, main, footer {
 
 header {
     max-width: 100%;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     position: absolute;
     width: 100vw;
 
@@ -330,7 +343,7 @@ footer {
     align-items: flex-end;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
 }
 
 footer span {

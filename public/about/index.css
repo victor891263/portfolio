@@ -3,7 +3,7 @@
 
 
 h1, h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 /* about section */
@@ -67,12 +67,11 @@ h1, h2 {
 
 .dual {
     display: grid;
-    max-width: 1024px;
 }
 
 @media (min-width: 1024px) {
     .dual {
-        grid-column-gap: 5rem;
-        grid-template-columns: 10rem auto;
+        grid-template-columns: auto 40rem;
+        justify-content: space-between;
     }
 }

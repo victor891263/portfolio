@@ -5,11 +5,17 @@ body {
     min-height: 100vh;
 }
 
+main {
+    width: 100%;
+}
+
 section {
     max-width: 540px;
 }
 
 h1 {
+    font-size: 2rem;
+    font-weight: 500;
     margin-bottom: 0.7em;
 }
 
@@ -41,4 +47,5 @@ p {
 
 footer {
     align-self: flex-end;
+    width: 100%;
 }
