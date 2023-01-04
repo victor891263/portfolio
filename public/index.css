@@ -101,7 +101,7 @@ section:nth-of-type(1) p {
 #connect .links a {
     align-items: center;
     display: flex;
-    gap: 0.4rem;
+    gap: 0.7rem;
 }
 
 #connect .links svg {
