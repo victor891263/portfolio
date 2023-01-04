@@ -1,22 +1,17 @@
 @import "styles/global.css";
 
 body {
+    align-content: space-between;
     display: grid;
     min-height: 100vh;
 }
 
-main {
-    width: 100%;
-}
-
 section {
-    max-width: 540px;
+    max-width: 420px;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 0.7em;
+    margin-bottom: 1.3rem;
 }
 
 p {
@@ -31,21 +26,16 @@ p {
 }
 
 .link-arrow span {
-    color: var(--sky-60);
+    color: var(--indigo-60);
 }
 
 .link-arrow svg {
-    fill: var(--sky-60);
-    height: 0.8rem;
+    fill: var(--indigo-60);
+    height: 0.7rem;
     margin-top: 0.1rem;
     transition: fill 0.3s, transform 0.2s;
 }
 
 .link-arrow:hover svg {
     transform: translateX(0.5rem);
-}
-
-footer {
-    align-self: flex-end;
-    width: 100%;
 }

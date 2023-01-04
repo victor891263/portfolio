@@ -1,90 +1,254 @@
 @import "styles/global.css";
 
 
-/* hero section */
+/* first section */
 
-#hero {
-    display: grid;
+section:nth-of-type(1) h1 {
+    line-height: 1.4;
+    margin-bottom: 2rem;
 }
 
-#hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5em;
-    max-width: 768px;
+section:nth-of-type(1) p {
+    font-size: 1.1rem;
 }
 
-@media (min-width: 768px) {
-    #hero h1 {
-        font-size: 3rem;
+@media (min-width: 1024px) {
+    section:nth-of-type(1) {
+        max-width: 600px;
     }
 }
 
 
-/* projects section */
 
-#projects h2 {
-    margin-bottom: 0.7em;
-}
+/* second section */
 
-#projects .link-arrow {
+#services h2 {
     margin-bottom: 3rem;
 }
 
-#projects .projects {
+#services > div {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 3rem 4rem;
 }
 
-#projects .projects > div {
+.symbol {
+    align-items: center;
+    background-color: var(--indigo-0);
+    border-radius: 0.4rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+    transition: background-color 0.3s;
 }
 
-#projects .projects .blank {
-    background-color: var(--gray-10);
-    border-radius: 0.7rem;
-    height: calc(10rem + 10vw);
-    margin-bottom: 0.6rem;
-    width: 100%;
+.symbol svg {
+    fill: var(--indigo-60);
+    width: 1.5rem;
 }
 
-@media (min-width: 1024px) {
-    #projects .projects {
+[data-theme='dark'] .symbol {
+    background-color: var(--indigo-90);
+}
+
+[data-theme='dark'] .symbol svg {
+    fill: var(--indigo-30);
+}
+
+#services h3 {
+    margin-bottom: 1rem;
+    margin-top: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    #services > div {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
-
-/* hello section */
-
-#hello h2 {
-    margin-bottom: 0.7em;
+@media (min-width: 1280px) {
+    #services > div {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
 
-/* classes */
 
-.link-arrow {
+
+#connect {
+    display: grid;
+    grid-row-gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+    #connect {
+        grid-template-columns: 350px 50%;
+        justify-content: space-between;
+    }
+}
+
+#connect h2 {
+    margin-bottom: 1.5rem;
+}
+
+#connect .links {
+    display: grid;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+
+#connect .links > div {
     align-items: center;
     display: flex;
     gap: 0.5rem;
-    width: fit-content;
 }
 
-.link-arrow span {
-    color: var(--blue-60);
+#connect .links svg {
+    fill: var(--gray-70);
+    width: 1.2rem;
 }
 
-.link-arrow svg {
-    fill: var(--blue-60);
-    height: 0.8rem;
-    margin-top: 0.1rem;
-    transition: fill 0.3s, transform 0.2s;
+#connect .links span {
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.link-arrow:hover svg {
-    transform: translateX(0.5rem);
+#connect form {
+    display: grid;
+    grid-gap: 1.6rem;
+}
+
+#connect form > div > * {
+    display: block;
+    width: 100%;
+}
+
+#connect label {
+    color: var(--gray-70);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#connect input[type="text"],
+#connect input[type="email"],
+#connect textarea {
+    border: 1px solid var(--gray-30);
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 4px -2px var(--gray-20);
+    padding: 0.7rem 0.8rem;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+#connect input[type="text"]:focus,
+#connect input[type="email"]:focus,
+#connect textarea:focus {
+    border-color: var(--indigo-60);
+}
+
+#connect textarea {
+    min-height: 0;
+    height: 10rem;
+    line-height: 1.5;
+    overflow: hidden;
+    resize: none;
+}
+
+#submitButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: var(--indigo-60);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    color: var(--gray-0);
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme='dark'] #submitButton {
+    color: var(--gray-90);
+}
+
+#connect input[type="submit"]:hover {
+    background-color: var(--indigo-70);
+}
+
+#connect input[type="submit"]:disabled:hover {
+    background-color: var(--indigo-60) !important;
+}
+
+#connect .error {
+    display: none;
+    margin-top: 0.5em;
+}
+
+#connect .error svg {
+    fill: var(--red-60);
+    height: 0.7em;
+    margin-right: 0.1rem;
+}
+
+#connect .error span {
+    color: var(--red-60);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+#connect .status {
+    margin-top: 1.5rem;
+}
+
+#connect .status > div {
+    border-radius: 0.4em;
+    display: none;
+    padding: 0.9rem 1rem;
+}
+
+#connect .status > div svg {
+    height: 0.7em;
+    margin-right: 0.3rem;
+}
+
+#connect .status .success {
+    background-color: var(--green-5);
+}
+
+#connect .status .success svg {
+    fill: var(--green-60);
+}
+
+#connect .status .success span {
+    color: var(--green-60);
+}
+
+#connect .status .fail {
+    background-color: var(--red-5);
+}
+
+#connect .status .fail svg {
+    fill: var(--red-60);
+}
+
+#connect .status .fail span {
+    color: var(--red-60);
+}
+
+#connect .status.succeeded .success {
+    display: block;
+}
+
+#connect .status.failed .fail {
+    display: block;
+}
+
+@media (min-width: 540px) {
+    #submitButton,
+    #connect .status > div {
+        width: fit-content;
+    }
 }

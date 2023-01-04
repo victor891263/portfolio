@@ -44,12 +44,3 @@ const observer = new IntersectionObserver((entries) => {
 
 // start observing the elements
 elementsToAnimate.forEach((element) => observer.observe(element));
-
-
-
-// toggling visibility of mobile navigation menu logic
-
-document.querySelector("#toggle-mobile-menu").addEventListener("click", () => {
-    if (root.getAttribute("data-mobile-nav") === "hidden") root.setAttribute("data-mobile-nav", "visible");
-    else root.setAttribute("data-mobile-nav", "hidden");
-});

@@ -9,78 +9,133 @@
 
     <link href="index.css" rel="stylesheet" type="text/css"/>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="scripts/global.js" type="text/javascript" defer></script>
+    <script src="index.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="top">
-            <a class="resume" href="https://drive.google.com/file/d/1KIXSvmBZn-Kbq60FtxNoDZ1DrWAnQDK1/view?usp=share_link" target="_blank">
-                <span>Resume</span>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.88 82.88"><path d="M65,77.41a10.29,10.29,0,0,0,7.33-3L85.83,60.84,81,56,68.4,68.52,68.31,11.8h-6.9l.09,56.66L49,56l-4.88,4.88L57.65,74.37A10.27,10.27,0,0,0,65,77.41Z" transform="translate(-23.42 -11.8)"/><path d="M99.39,67.05V84.32a3.44,3.44,0,0,1-3.45,3.45H33.78a3.44,3.44,0,0,1-3.45-3.45V67.05H23.42V84.32A10.36,10.36,0,0,0,33.78,94.68H95.94A10.36,10.36,0,0,0,106.3,84.32V67.05Z" transform="translate(-23.42 -11.8)"/></svg>
-            </a>
-            <div class="buttons">
-                <button id="theme-button">
-                    <svg class="sun" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.78 76.78"><path d="M110.81,61.46v-6.4H94.58a21.58,21.58,0,0,0-1.4-5.18l14-8.18L104,36.17,90,44.35A23,23,0,0,0,86.3,40.7l8.16-14-5.53-3.22-8.15,14a22,22,0,0,0-5.16-1.39V19.87h-6.4V36.1a22.27,22.27,0,0,0-5.12,1.37L56,23.46l-5.53,3.22,8.14,14a22.29,22.29,0,0,0-3.67,3.66l-14-8.16L37.66,41.7l14,8.15a21.38,21.38,0,0,0-1.41,5.21H34v6.4H50.26a21.79,21.79,0,0,0,1.4,5.19l-14,8.14,3.22,5.53,14-8.15a22.54,22.54,0,0,0,3.62,3.62l-8.15,14L55.88,93,64,79a22.29,22.29,0,0,0,5.19,1.41V96.65h6.4V80.43A22.11,22.11,0,0,0,80.86,79L89,93l5.53-3.22L86.38,75.76A22.29,22.29,0,0,0,90,72.15l14,8.17,3.2-5.53-14-8.17a21.9,21.9,0,0,0,1.4-5.16Zm-22.39-3.2c-.68,21.14-31.33,21.14-32,0C57.1,37.12,87.75,37.13,88.42,58.26Z" transform="translate(-34.03 -19.87)"/></svg>
-                    <svg class="moon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.96 80.7"><path d="M72.72,102.87A40.37,40.37,0,0,1,32.4,62.54c-.52-30.09,33.71-50.36,59.78-35.25l5.22,2.89-5.18,3C69.7,45.53,71.35,79.75,94.91,90l5.44,2.46-4.93,3.38A40.08,40.08,0,0,1,72.72,102.87Zm0-73.93a33.63,33.63,0,0,0-33.6,33.6c-.52,23.92,26.09,41,47.57,30.52a38.79,38.79,0,0,1-3-62.24A32.81,32.81,0,0,0,72.72,28.94Z" transform="translate(-32.39 -22.17)"/></svg>
-                </button>
-                <button id="toggle-mobile-menu">
-                    <svg class="burger" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.99 67.99"><rect y="29.75" width="101.99" height="8.5"/><rect width="101.99" height="8.5"/><rect y="59.49" width="101.99" height="8.5"/></svg>
-                    <svg class="cross" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.5 67.5"><polygon points="67.5 3.98 63.52 0 33.75 29.77 3.98 0 0 3.98 29.77 33.75 0 63.52 3.98 67.5 33.75 37.73 63.52 67.5 67.5 63.52 37.73 33.75 67.5 3.98"/></svg>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <nav class="left">
-        <a href="/">Index</a>
-        <a href="/about">About</a>
-        <a href="/works">Works</a>
-        <a href="/contact">Contact</a>
-    </nav>
-    <main>
-        <section id="hero" class="animated">
-            <h1>Hello. Victor here. I am a freelance web developer.</h1>
-            <a href="/about" class="link-arrow">
-                <span>Find out more</span>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.77 50.81"><g id="_01_align_center" data-name=" 01 align center"><path d="M105.27,53.58,87.9,36.21l-5.36,5.36L98.68,57.72l-81,.11v7.58l81.23-.12L82.54,81.67,87.89,87l17.38-17.37A11.74,11.74,0,0,0,105.27,53.58Z" transform="translate(-17.68 -36.21)"/></g></svg>
-            </a>
-        </section>
-        <section id="projects" class="animated">
-            <h2>Featured works</h2>
-            <a href="/works" class="link-arrow">
-                <span>View all</span>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.77 50.81"><g id="_01_align_center" data-name=" 01 align center"><path d="M105.27,53.58,87.9,36.21l-5.36,5.36L98.68,57.72l-81,.11v7.58l81.23-.12L82.54,81.67,87.89,87l17.38-17.37A11.74,11.74,0,0,0,105.27,53.58Z" transform="translate(-17.68 -36.21)"/></g></svg>
-            </a>
-            <div class="projects">
-                <div class="animated">
-                    <div class="blank"></div>
-                    <h3>Coming soon</h3>
-                    <p>Once finished, new projects will be added here.</p>
+<header>
+    <span>victor.</span>
+    <div>
+        <a class="button" id="resume" href="./resume.pdf" target="_blank">
+            <span>Resume</span>
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.88 82.88"><path d="M65,77.41a10.29,10.29,0,0,0,7.33-3L85.83,60.84,81,56,68.4,68.52,68.31,11.8h-6.9l.09,56.66L49,56l-4.88,4.88L57.65,74.37A10.27,10.27,0,0,0,65,77.41Z" transform="translate(-23.42 -11.8)"/><path d="M99.39,67.05V84.32a3.44,3.44,0,0,1-3.45,3.45H33.78a3.44,3.44,0,0,1-3.45-3.45V67.05H23.42V84.32A10.36,10.36,0,0,0,33.78,94.68H95.94A10.36,10.36,0,0,0,106.3,84.32V67.05Z" transform="translate(-23.42 -11.8)"/></svg>
+        </a>
+        <button class="button" id="theme-button">
+            <svg class="sun" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.78 76.78"><path d="M110.81,61.46v-6.4H94.58a21.58,21.58,0,0,0-1.4-5.18l14-8.18L104,36.17,90,44.35A23,23,0,0,0,86.3,40.7l8.16-14-5.53-3.22-8.15,14a22,22,0,0,0-5.16-1.39V19.87h-6.4V36.1a22.27,22.27,0,0,0-5.12,1.37L56,23.46l-5.53,3.22,8.14,14a22.29,22.29,0,0,0-3.67,3.66l-14-8.16L37.66,41.7l14,8.15a21.38,21.38,0,0,0-1.41,5.21H34v6.4H50.26a21.79,21.79,0,0,0,1.4,5.19l-14,8.14,3.22,5.53,14-8.15a22.54,22.54,0,0,0,3.62,3.62l-8.15,14L55.88,93,64,79a22.29,22.29,0,0,0,5.19,1.41V96.65h6.4V80.43A22.11,22.11,0,0,0,80.86,79L89,93l5.53-3.22L86.38,75.76A22.29,22.29,0,0,0,90,72.15l14,8.17,3.2-5.53-14-8.17a21.9,21.9,0,0,0,1.4-5.16Zm-22.39-3.2c-.68,21.14-31.33,21.14-32,0C57.1,37.12,87.75,37.13,88.42,58.26Z" transform="translate(-34.03 -19.87)"/></svg>
+            <svg class="moon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.96 80.7"><path d="M72.72,102.87A40.37,40.37,0,0,1,32.4,62.54c-.52-30.09,33.71-50.36,59.78-35.25l5.22,2.89-5.18,3C69.7,45.53,71.35,79.75,94.91,90l5.44,2.46-4.93,3.38A40.08,40.08,0,0,1,72.72,102.87Zm0-73.93a33.63,33.63,0,0,0-33.6,33.6c-.52,23.92,26.09,41,47.57,30.52a38.79,38.79,0,0,1-3-62.24A32.81,32.81,0,0,0,72.72,28.94Z" transform="translate(-32.39 -22.17)"/></svg>
+        </button>
+    </div>
+</header>
+<main>
+    <section class="animated">
+        <h1>Victor here — I make impactful development and design.</h1>
+        <p>I’m a self-taught full stack developer with a degree in electronic engineering. My proficiency in front end and back end technologies allow for the development of user interfaces, APIs, and databases, tailored to fulfill your projects' needs.</p>
+    </section>
+    <section id="services" class="animated">
+        <h2>What I offer.</h2>
+        <div>
+            <div class="animated">
+                <div class="symbol">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.32 64"><title>Untitled-1</title><path d="M112,63.85V38.31A17.79,17.79,0,0,0,94.23,20.53H58.67A17.79,17.79,0,0,0,40.9,38.31V63.85a10.64,10.64,0,0,0,3.55,20.68h64A10.64,10.64,0,0,0,112,63.85ZM58.67,27.64H94.23a10.66,10.66,0,0,1,10.66,10.67V63.19H90.13a7.11,7.11,0,0,0-5.43,2.52l-.88,1H69.07l-.87-1a7.13,7.13,0,0,0-5.44-2.52H48V38.31A10.66,10.66,0,0,1,58.67,27.64Zm49.78,49.77h-64a3.56,3.56,0,0,1,0-7.11H62.77l.87,1a7.11,7.11,0,0,0,5.43,2.52H83.82a7.13,7.13,0,0,0,5.44-2.52l.87-1h18.32a3.56,3.56,0,0,1,0,7.11Z" transform="translate(-33.79 -20.53)"/></svg>
                 </div>
-                <div class="animated">
-                    <div class="blank"></div>
-                    <h3>Coming soon</h3>
-                    <p>Once finished, new projects will be added here.</p>
-                </div>
+                <h3>Static sites.</h3>
+                <p>Easy to maintain but highly performant, static sites display the same information for all users, from all contexts.</p>
             </div>
-        </section>
-        <section id="hello" class="animated">
-            <h2>Let's get to know each other.</h2>
-            <a href="/contact" class="link-arrow">
-                <span>Get in touch</span>
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.77 50.81"><g id="_01_align_center" data-name=" 01 align center"><path d="M105.27,53.58,87.9,36.21l-5.36,5.36L98.68,57.72l-81,.11v7.58l81.23-.12L82.54,81.67,87.89,87l17.38-17.37A11.74,11.74,0,0,0,105.27,53.58Z" transform="translate(-17.68 -36.21)"/></g></svg>
-            </a>
-        </section>
-    </main>
-    <footer>
-        <span>© 2022 Victor</span>
-        <div class="icons">
-            <a href="https://www.linkedin.com/in/victor891263" target="_blank">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.82 96.81"><path id="Path_2520" data-name="Path 2520" d="M94,93.63H79.66V71.16c0-5.36-.1-12.25-7.46-12.25s-8.62,5.83-8.62,11.86V93.63H49.24V47.43H63v6.31h.19a15.09,15.09,0,0,1,13.59-7.46c14.54,0,17.22,9.56,17.22,22ZM33.05,41.11a8.33,8.33,0,1,1,8.33-8.33,8.33,8.33,0,0,1-8.33,8.33h0m7.17,52.52H25.86V47.43H40.22Zm60.94-82.49H18.65a7.06,7.06,0,0,0-7.14,7V101a7.06,7.06,0,0,0,7.14,7h82.51a7.09,7.09,0,0,0,7.17-7V18.11a7.09,7.09,0,0,0-7.17-7" transform="translate(-11.51 -11.13)"/></svg>
-            </a>
-            <a href="https://www.github.com/victor891263" target="_blank">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.02 86.82"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><path class="cls-1" d="M61.8,9.78A44.51,44.51,0,0,0,47.72,96.52c2.23.42,3-1,3-2.14s0-4.56,0-8.28c-12.38,2.69-15-5.25-15-5.25-2-5.15-4.94-6.52-4.94-6.52-4-2.76.3-2.7.3-2.7,4.47.32,6.82,4.59,6.82,4.59,4,6.8,10.42,4.84,13,3.7a9.53,9.53,0,0,1,2.82-6C43.79,72.84,33.4,69,33.4,52A17.27,17.27,0,0,1,38,40c-.46-1.12-2-5.65.43-11.78,0,0,3.74-1.19,12.25,4.57a42.12,42.12,0,0,1,22.28,0c8.5-5.76,12.23-4.57,12.23-4.57,2.42,6.13.9,10.66.44,11.78A17.22,17.22,0,0,1,90.19,52c0,17.09-10.41,20.86-20.32,22,1.59,1.38,3,4.09,3,8.24,0,6,0,10.75,0,12.21,0,1.19.8,2.58,3,2.14A44.52,44.52,0,0,0,61.8,9.78Z" transform="translate(-17.29 -9.78)"/></svg>
-            </a>
+            <div class="animated">
+                <div class="symbol">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.32 64"><title>Untitled-1</title><path d="M112,63.85V38.31A17.79,17.79,0,0,0,94.23,20.53H58.67A17.79,17.79,0,0,0,40.9,38.31V63.85a10.64,10.64,0,0,0,3.55,20.68h64A10.64,10.64,0,0,0,112,63.85ZM58.67,27.64H94.23a10.66,10.66,0,0,1,10.66,10.67V63.19H90.13a7.11,7.11,0,0,0-5.43,2.52l-.88,1H69.07l-.87-1a7.13,7.13,0,0,0-5.44-2.52H48V38.31A10.66,10.66,0,0,1,58.67,27.64Zm49.78,49.77h-64a3.56,3.56,0,0,1,0-7.11H62.77l.87,1a7.11,7.11,0,0,0,5.43,2.52H83.82a7.13,7.13,0,0,0,5.44-2.52l.87-1h18.32a3.56,3.56,0,0,1,0,7.11Z" transform="translate(-33.79 -20.53)"/></svg>
+                </div>
+                <h3>Web apps.</h3>
+                <p>Typically support responsive or real-time display of information and user interactions while utilizing data storage.</p>
+            </div>
+            <div class="animated">
+                <div class="symbol">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.32 64"><title>Untitled-1</title><path d="M112,63.85V38.31A17.79,17.79,0,0,0,94.23,20.53H58.67A17.79,17.79,0,0,0,40.9,38.31V63.85a10.64,10.64,0,0,0,3.55,20.68h64A10.64,10.64,0,0,0,112,63.85ZM58.67,27.64H94.23a10.66,10.66,0,0,1,10.66,10.67V63.19H90.13a7.11,7.11,0,0,0-5.43,2.52l-.88,1H69.07l-.87-1a7.13,7.13,0,0,0-5.44-2.52H48V38.31A10.66,10.66,0,0,1,58.67,27.64Zm49.78,49.77h-64a3.56,3.56,0,0,1,0-7.11H62.77l.87,1a7.11,7.11,0,0,0,5.43,2.52H83.82a7.13,7.13,0,0,0,5.44-2.52l.87-1h18.32a3.56,3.56,0,0,1,0,7.11Z" transform="translate(-33.79 -20.53)"/></svg>
+                </div>
+                <h3>Wordpress sites.</h3>
+                <p>Custom plugin development, theme customization, and even creating a headless WordPress architecture.</p>
+            </div>
+            <div class="animated">
+                <div class="symbol">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.02 83.02"><title>Untitled-1</title><path d="M78.59,17.29H30.17a17.32,17.32,0,0,0-17.3,17.3V51.88A24.25,24.25,0,0,0,37.08,76.1H44V89.93a10.38,10.38,0,0,0,20.76,0V76.1h6.91A24.25,24.25,0,0,0,95.89,51.88V34.59A17.33,17.33,0,0,0,78.59,17.29Zm-58.8,17.3A10.38,10.38,0,0,1,30.17,24.21H47.46v3.46a3.46,3.46,0,0,0,6.92,0V24.21H61.3V34.59a3.46,3.46,0,1,0,6.91,0V24.21h6.92v17.3a3.46,3.46,0,1,0,6.92,0V24.85A10.38,10.38,0,0,1,89,34.59V51.88H19.79ZM71.67,69.18H61.3a3.46,3.46,0,0,0-3.46,3.46V89.93a3.46,3.46,0,0,1-6.92,0V72.64a3.46,3.46,0,0,0-3.46-3.46H37.08A17.3,17.3,0,0,1,21.25,58.8H87.5A17.3,17.3,0,0,1,71.67,69.18Z" transform="translate(-12.87 -17.29)"/></svg>
+                </div>
+                <h3>UI design.</h3>
+                <p>Crafting user-centered interfaces, adhering to brand guidelines, using modern software to meet requirements.</p>
+            </div>
+            <div class="animated">
+                <div class="symbol">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.71 80.72"><title>Untitled-1</title><path d="M56.05,61.21a3.36,3.36,0,0,1-3.36-3.36c0-4.4,3.49-6.32,5-7.14a3.36,3.36,0,0,0-1-6.25,3.37,3.37,0,0,0-4,3.3,3.37,3.37,0,1,1-6.73,0,10.09,10.09,0,1,1,14.95,8.85c-1.5.82-1.5,1.07-1.5,1.24a3.37,3.37,0,0,1-3.36,3.37Zm0,3.37a4.2,4.2,0,1,0,4.21,4.2A4.2,4.2,0,0,0,56.05,64.58Zm37-9.82a36.82,36.82,0,0,1-.83,7.54A20.13,20.13,0,0,1,99.77,78V94.84a3.37,3.37,0,0,1-3.36,3.37H79.59a20.14,20.14,0,0,1-15.73-7.58,36.67,36.67,0,0,1-7.54.84,26.9,26.9,0,0,0,23.27,13.46H96.41A10.09,10.09,0,0,0,106.5,94.84V78A26.88,26.88,0,0,0,93,54.76Zm-6.79,1.92A30.27,30.27,0,0,0,53.86,24.3C38.64,25.37,25.78,39.65,25.78,55.48v17A12.34,12.34,0,0,0,38.1,84.75h15C70.6,84.75,85.13,72.42,86.24,56.68ZM72.7,37.84A23.6,23.6,0,0,1,79.54,56.2C78.68,68.24,66.85,78,53.15,78h-15a5.61,5.61,0,0,1-5.59-5.61V55.48c0-12.43,10-23.64,21.83-24.48.56,0,1.12-.06,1.67-.06a23.56,23.56,0,0,1,16.69,6.9Z" transform="translate(-25.78 -24.22)"/></svg>
+                </div>
+                <h3>Consultation.</h3>
+                <p>Personalized guidance on the most effective solutions for the specific needs and goals of your project.</p>
+            </div>
         </div>
-    </footer>
+    </section>
+    <section id="connect" class="animated">
+        <div>
+            <h2>Contact me.</h2>
+            <p>Use the form to send me a message. I'll try to reply within a day. You can also reach out to me via social media or my email.</p>
+            <div class="links">
+                <a href="mailto:victor891263@gmail.com" target="_blank">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.1 384.3"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><path class="cls-1" d="M802.35,720A82.35,82.35,0,0,0,720,802.35V1022a82.35,82.35,0,0,0,82.35,82.35h329.4A82.35,82.35,0,0,0,1214.1,1022V802.35A82.35,82.35,0,0,0,1131.75,720Zm6.73,60a20.59,20.59,0,0,0-27.18,30.91l171.56,151a20.61,20.61,0,0,0,27.18,0l171.56-151A20.59,20.59,0,0,0,1125,780l-158,139Z" transform="translate(-720 -720)"/></svg>
+                    <span>victor891263@gmail.com</span>
+                </a>
+                <a href="https://www.github.com/victor891263" target="_blank">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.02 86.82"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><path class="cls-1" d="M61.8,9.78A44.51,44.51,0,0,0,47.72,96.52c2.23.42,3-1,3-2.14s0-4.56,0-8.28c-12.38,2.69-15-5.25-15-5.25-2-5.15-4.94-6.52-4.94-6.52-4-2.76.3-2.7.3-2.7,4.47.32,6.82,4.59,6.82,4.59,4,6.8,10.42,4.84,13,3.7a9.53,9.53,0,0,1,2.82-6C43.79,72.84,33.4,69,33.4,52A17.27,17.27,0,0,1,38,40c-.46-1.12-2-5.65.43-11.78,0,0,3.74-1.19,12.25,4.57a42.12,42.12,0,0,1,22.28,0c8.5-5.76,12.23-4.57,12.23-4.57,2.42,6.13.9,10.66.44,11.78A17.22,17.22,0,0,1,90.19,52c0,17.09-10.41,20.86-20.32,22,1.59,1.38,3,4.09,3,8.24,0,6,0,10.75,0,12.21,0,1.19.8,2.58,3,2.14A44.52,44.52,0,0,0,61.8,9.78Z" transform="translate(-17.29 -9.78)"/></svg>
+                    <span>View GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/victor891263" target="_blank">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.82 96.81"><path id="Path_2520" data-name="Path 2520" d="M94,93.63H79.66V71.16c0-5.36-.1-12.25-7.46-12.25s-8.62,5.83-8.62,11.86V93.63H49.24V47.43H63v6.31h.19a15.09,15.09,0,0,1,13.59-7.46c14.54,0,17.22,9.56,17.22,22ZM33.05,41.11a8.33,8.33,0,1,1,8.33-8.33,8.33,8.33,0,0,1-8.33,8.33h0m7.17,52.52H25.86V47.43H40.22Zm60.94-82.49H18.65a7.06,7.06,0,0,0-7.14,7V101a7.06,7.06,0,0,0,7.14,7h82.51a7.09,7.09,0,0,0,7.17-7V18.11a7.09,7.09,0,0,0-7.17-7" transform="translate(-11.51 -11.13)"/></svg>
+                    <span>View LinkedIn</span>
+                </a>
+
+            </div>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="sender" id="name"/>
+                    <div class="error name">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.48 83.48"><polygon points="83.48 4.92 78.57 0 41.74 36.82 4.92 0 0 4.92 36.82 41.74 0 78.57 4.92 83.48 41.74 46.66 78.57 83.48 83.48 78.57 46.66 41.74 83.48 4.92"/></svg>
+                        <span>Name cannot be blank and must be less than 20 characters.</span>
+                    </div>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="senderEmail" id="email"/>
+                    <div class="error email">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.48 83.48"><polygon points="83.48 4.92 78.57 0 41.74 36.82 4.92 0 0 4.92 36.82 41.74 0 78.57 4.92 83.48 41.74 46.66 78.57 83.48 83.48 78.57 46.66 41.74 83.48 4.92"/></svg>
+                        <span>Email cannot be blank and must be less than 50 characters.</span>
+                    </div>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                    <div class="error message">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.48 83.48"><polygon points="83.48 4.92 78.57 0 41.74 36.82 4.92 0 0 4.92 36.82 41.74 0 78.57 4.92 83.48 41.74 46.66 78.57 83.48 83.48 78.57 46.66 41.74 83.48 4.92"/></svg>
+                        <span>Message cannot be blank and must be less than 500 characters.</span>
+                    </div>
+                </div>
+                <input type="submit" value="Send message" id="submitButton"/>
+            </form>
+            <div class="status">
+                <div class="success">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.23 52.78"><path d="M62.88,80.38A9.65,9.65,0,0,1,56,77.54L37.87,59.42l4.59-4.59L60.58,73a3.26,3.26,0,0,0,4.59,0L110.52,27.6l4.58,4.59L69.75,77.54A9.64,9.64,0,0,1,62.88,80.38Z" transform="translate(-37.87 -27.6)"/></svg>
+                    <span>Message sent successfully!</span>
+                </div>
+                <div class="fail">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.48 83.48"><polygon points="83.48 4.92 78.57 0 41.74 36.82 4.92 0 0 4.92 36.82 41.74 0 78.57 4.92 83.48 41.74 46.66 78.57 83.48 83.48 78.57 46.66 41.74 83.48 4.92"/></svg>
+                    <span>Failed to send message. Retry.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <span>© Victor 2021.</span>
+    <span>All rights reserved.</span>
+</footer>
 </body>
 </html>
