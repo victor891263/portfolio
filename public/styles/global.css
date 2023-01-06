@@ -11,11 +11,14 @@
     --indigo-10: rgb(224, 231, 255);
     --indigo-20: rgb(199, 210, 254);
     --indigo-30: rgb(165, 180, 252);
+    --indigo-40: rgb(129, 140, 248);
     --indigo-50: rgb(99, 102, 241);
     --indigo-60: rgb(79, 70, 229);
     --indigo-70: rgb(67, 56, 202);
     --indigo-80: rgb(55, 48, 163);
     --indigo-90: rgb(49, 46, 129);
+
+    --indigo-desat-90: rgb(39, 37, 65);
 }
 
 @media (min-width: 768px) {

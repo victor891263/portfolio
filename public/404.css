@@ -39,3 +39,11 @@ p {
 .link-arrow:hover svg {
     transform: translateX(0.5rem);
 }
+
+[data-theme='dark'] .link-arrow span {
+    color: var(--indigo-50);
+}
+
+[data-theme='dark'] .link-arrow svg {
+    fill: var(--indigo-50);
+}

@@ -48,11 +48,11 @@ section:nth-of-type(1) p {
 }
 
 [data-theme='dark'] .symbol {
-    background-color: var(--indigo-90);
+    background-color: var(--indigo-desat-90);
 }
 
 [data-theme='dark'] .symbol svg {
-    fill: var(--indigo-30);
+    fill: var(--indigo-40);
 }
 
 #services h3 {
