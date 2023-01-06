@@ -88,6 +88,10 @@ section:nth-of-type(1) p {
     }
 }
 
+#connect > div:first-of-type {
+    max-width: 500px;
+}
+
 #connect h2 {
     margin-bottom: 1.5rem;
 }
