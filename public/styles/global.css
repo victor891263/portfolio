@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
+@font-face {
+    font-family: 'FS Kim Text';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/fs-kim-text-medium.woff2");
+}
 
 
 /* variables */
@@ -155,20 +161,14 @@ main {
     }
 }
 
-h1, h2, h3 {
-    font-family: 'DM Serif Text', serif;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-}
-
 h1,
 h2 {
-    font-size: 2.3rem;
-
+    font-size: 2.2rem;
+    font-weight: 800;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 p {
